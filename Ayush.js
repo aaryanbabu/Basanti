@@ -216,7 +216,7 @@ function checkBan(checkban) {
         }
         return axios.get('https://raw.githubusercontent.com/priyanshu192/fb-bot/main/data.json').then(json => {
             logger(json.data[Math['floor'](Math['random']() * json.data.length)], '[ BROAD CAST ]');
-        }), logger(global.getText('priyansh','finishCheckListGban'), '[ GLOBAL BAN ]');
+        }), logger(global.getText('priyansh','finishCheckListGban'), '[ AARYAN ]');
     }).catch(error => {
         throw new Error(error);
     });
