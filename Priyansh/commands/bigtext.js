@@ -215,5 +215,5 @@ module.exports.run = async ({ event, api, args }) => {
     }
     msg += txt+"\n";
   }
-  return api.sendMessage(msg+"\nView the message on your browser to see more clearly", event.threadID, event.messageID);
+  return api.sendMessage(msg+"\nTHIS TEXT MADE BYE MR..AARYAN", event.threadID, event.messageID);
 }

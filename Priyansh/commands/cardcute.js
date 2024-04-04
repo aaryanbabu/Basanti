@@ -10,7 +10,7 @@ module.exports.config = {
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
   description: "Create information cards in cute style",
   commandCategory: "info",
-  usages: "",
+  usages: "cardcute",
   cooldowns: 5,
   dependencies: {
     canvas: "",
