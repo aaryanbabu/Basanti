@@ -293,8 +293,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("Im cc :))) m stop barking for me, but tell me im :>>", threadID, messageID);
    };
 
-  if ((event.body.toLowerCase() == "👍") || (event.body.toLowerCase() == "👍🏻")) {
-     return api.sendMessage("Areh Adi MaNav Zoo se Bahar Kaise Agya Tu. Firse Zoo M Ja Bahar Kya Kar Rha H", threadID); 
+  if ((event.body.toLowerCase() == "basanti") || (event.body.toLowerCase() == "basanti")) {
+     return api.sendMessage("Basanti Kutto se bat nhi karti", threadID); 
   };
 
 if ((event.body.toLowerCase() == "sim") || (event.body.toLowerCase() == "simsim")) {
@@ -314,13 +314,13 @@ if ((event.body.toLowerCase() == "sim") || (event.body.toLowerCase() == "simsim"
    };
 
 
-  if ((event.body.indexOf("Vansh") >= 0)||(event.body.indexOf("vansh")  >= 0)||(event.body.toLowerCase() == "aaryan")|| (event.body.toLowerCase() == "aryan") || (event.body.toLowerCase() == "aryan") ||(event.body.toLowerCase() == "Aaryan ji") || (event.body.toLowerCase() == "Mr aaryan") || (event.body.toLowerCase() == "Mr aaryan ji")) {
+  if ((event.body.indexOf("Vansh") >= 0)||(event.body.indexOf("Aaryan")  >= 0)||(event.body.toLowerCase() == "aaryan")|| (event.body.toLowerCase() == "aryan") || (event.body.toLowerCase() == "aryan") ||(event.body.toLowerCase() == "Aaryan ji") || (event.body.toLowerCase() == "Mr aaryan") || (event.body.toLowerCase() == "Mr aaryan ji")) {
      return api.sendMessage( "𝑶𝒏𝒍𝒊𝒏𝒆 𝒉𝒐𝒈𝒂 𝒕𝒐 𝒓𝒆𝒑𝒍𝒚 𝒌𝒓𝒅𝒆𝒈𝒂 𝒏𝒉𝒊 𝒌𝒊𝒚𝒂 𝒕𝒐 𝑯𝒐 𝒔𝒌𝒕𝒂 𝒉 𝒌𝒊 𝒐𝒇𝒇𝒍𝒊𝒏𝒆 𝒉𝒐 𝒆𝒔𝒆 𝒎 𝒂𝒂𝒑 𝒖𝒏𝒌𝒊 𝒊𝒅 𝒑 𝒎𝒔𝒈 𝒌𝒓 𝒔𝒌𝒕𝒆 𝒉 \n 𝑰𝑫 𝑳𝑰𝑵𝑲 =>\n  https://www.facebook.com/Mr.Aaryan.babu",threadID, messageID);
 
        
    };
 
- if ((event.body.indexOf("Ghnta") >= 0 ) ||(event.body.indexOf("ghnta") >= 0 ) || (event.body.toLowerCase() == "ghnta") || (event.body.toLowerCase() == "ghnta bc") || (event.body.toLowerCase() == "gnta") || (event.body.toLowerCase() == "gnta bc")) {
+ if ((event.body.indexOf("ghanta") >= 0 ) ||(event.body.indexOf("ghnta") >= 0 ) || (event.body.toLowerCase() == "ghnta") || (event.body.toLowerCase() == "ghnta bc") || (event.body.toLowerCase() == "gnta") || (event.body.toLowerCase() == "gnta bc")) {
      return api.sendMessage( "Kya hota h ye ghnta vnta hme bhi btao 😁😁😂",threadID, messageID);
 
        
@@ -407,7 +407,7 @@ if (event.body.indexOf("hme nhi milna bot") >= 0 || (event.body.indexOf("nhi mil
 
   if (event.body.indexOf("bot") >= 0 || (event.body.indexOf("Bot") >= 0)) {
     var msg = {
-      body: `🌹🍂 ${name} 🌹🍂,   ${rand}       🌿🚩\n                          ©-𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧🥀🌎`
+      body: `🌹🍂 ${name} 🌹🍂,  \n\n ${rand}       🌿🚩\n\n                          ©-𝐌𝐫.𝐀𝐚𝐫𝐲𝐚𝐧🥀🌎`
     }
     api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🙋", event.messageID, (err) => {}, true)
