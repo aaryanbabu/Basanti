@@ -2,7 +2,7 @@ module.exports.config = {
   name: "pair",
   version: "1.0.0", 
   hasPermssion: 0,
-  credits: "D-Jukie (Xuyên get)",
+  credits: "Mr Aaryan",
   description: "Pairing",
   commandCategory: "Love", 
   usages: "pair", 
