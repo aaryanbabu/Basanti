@@ -371,9 +371,9 @@ if (event.body.indexOf("Gu khale") >= 0 || (event.body.indexOf("gu khale") >= 0)
   };
 
 
-if (event.body.indexOf("🇮🇳") >= 0 || (event.body.indexOf("independence") >= 0)||(event.body.indexOf("Independence") >= 0)||(event.body.indexOf("Jai Hind") >= 0)) {
+if (event.body.indexOf("🙏") >= 0 || (event.body.indexOf("jai") >= 0)||(event.body.indexOf("mata") >= 0)||(event.body.indexOf("Jai mata") >= 0)) {
     var msg = {
-      body: `${name}, Jai Hind 🫡🚩🚩🚩💝`
+      body: `${name}, Jai Mata Di 🙏🚩🚩🚩💝`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
