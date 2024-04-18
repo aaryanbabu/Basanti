@@ -1,11 +1,11 @@
 module.exports.config = {
-  name: "pair3",
+  name: "pair4",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "faiz Ansari",
+  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
   description: "It's a compound :>",
   commandCategory: "Giải trí",
-  usages: "[@mention]",
+  usages: "",
   dependencies: {
         "axios": "",
         "fs-extra": ""
@@ -59,7 +59,9 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   var tile = djtme[Math.floor(Math.random() * djtme.length)];
 
   var background = [
-  "https://i.imgur.com/CYsOXjr.jpg",
+  "https://i.postimg.cc/wjJ29HRB/background1.png",
+  "https://i.postimg.cc/zf4Pnshv/background2.png",
+  "https://i.postimg.cc/5tXRQ46D/background3.png"
   ];
   var rd = background[Math.floor(Math.random() * background.length)];
   
@@ -92,13 +94,13 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   let canvas = createCanvas(baseImage.width, baseImage.height);
   let ctx = canvas.getContext("2d");
   ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-  ctx.drawImage(baseAvt1, 230, 250, 240, 327);
-  ctx.drawImage(baseAvt2, 725, 245, 240, 330);
+  ctx.drawImage(baseAvt1, 100, 150, 300, 300);
+  ctx.drawImage(baseAvt2, 900, 150, 300, 300);
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: `🍫${name1}🍫\nLOVE🍫${name2}🍫\n✧═══•❁『${tile}%』❁•═══✧`,
+  return api.sendMessage({ body: `Congratulations ${name1} successfully paired with ${name2}\nThe odds are ${tile}%`,
             mentions: [{
           tag: `${name2}`,
           id: id2
@@ -106,4 +108,4 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);
-}
+  }

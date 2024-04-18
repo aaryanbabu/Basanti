@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "pair6",
+	name: "pair5",
 	version: "1.0.1",
 	hasPermssion: 0,
 	credits: "",
@@ -16,9 +16,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'pair7.png');
+    const path = resolve(__dirname, 'cache/canvas', 'pair6.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/vB9FfVV2/IMG-20231005-024734.jpg", path);
+    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/fWYH1CrL/pair6-11zon.png", path);
 }
 
 async function makeImage({ one, two }) {
@@ -28,7 +28,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let pairing_img = await jimp.read(__root + "/pair7.png");
+    let pairing_img = await jimp.read(__root + "/pair6.png");
     let pathImg = __root + `/pairing_${one}__${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -41,7 +41,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    pairing_img.composite(circleOne.resize(253, 253), 249, 263).composite(circleTwo.resize(253, 253), 783, 263);
+    pairing_img.composite(circleOne.resize(330, 330), 162, 194).composite(circleTwo.resize(330, 330), 785, 194);
     
     let raw = await pairing_img.getBufferAsync("image/png");
     
@@ -83,5 +83,5 @@ let hemang = ["𝑲𝒚𝒂 𝒕𝒖𝒎𝒏𝒆 𝒌𝒉𝒂𝒏𝒂 𝒌𝒉�
         var sex = await data[id].gender;
         var gender = sex == 2 ? "Male🧑" : sex == 1 ? "Female👩‍  " : "Tran Duc Bo";
 var one = senderID, two = id;
-    return makeImage({ one, two }).then(path => api.sendMessage({ body: `${namee}\n💘🌹💘🌹💘---->[${tle}]\n${name}\n                              ©- 𝓐𝓪𝓻𝔂𝓪𝓷 `, mentions: arraytag, attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+    return makeImage({ one, two }).then(path => api.sendMessage({ body: `💞${namee}\n                   🌺   𝗟𝗼𝘃𝗲   🌺\n💞${name}\n      ✧═══•❁『 ${tle} 』❁•═══✧\n                              ©- ℳ𝓇.𝒜𝒶𝓇𝓎𝒶𝓃`, mentions: arraytag, attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
 }

@@ -12,13 +12,12 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
-	if(react.includes("radhe radhe") ||
-     react.includes("RADHE RADHE") || react.includes("Jay shri radhe") || react.includes("radhe radhe") ||
-react.includes("jay shri krishna") ||
-react.includes("krishna")) {
+	if(react.includes("Radhe") ||
+     react.includes("RADHE RADHE") || react.includes("radhe") || react.includes("Radhe radhe") ||
+react.includes("Jay shri krishna") ||
+react.includes("Krishna")) {
 		var msg = {
-				body: `【  राधे _राधे _________❤️🙏  】`,attachment: 
-fs.createReadStream(__dirname + `/noprefix/flute.mp3`)
+				body: ` राधे राधे __❤️🙏 `,
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🙏", event.messageID, (err) => {}, true)

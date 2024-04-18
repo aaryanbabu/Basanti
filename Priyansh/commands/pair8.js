@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "pair7",
+  name: "pair8",
   version: "1.0.1",
   hasPermssion: 0,
   credits: "",
@@ -16,9 +16,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'aar.jpg');
+    const path = resolve(__dirname, 'cache/canvas', 'aarp.jpg');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.imgur.com/RcVPdSL.jpg", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/m65gjsU.png", path);
 }
 async function makeImage({ one, two }) {
     const fs = global.nodemodule["fs-extra"];
@@ -27,7 +27,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let pairing_img = await jimp.read(__root + "/aar.jpg");
+    let pairing_img = await jimp.read(__root + "/aarp.jpg");
     let pathImg = __root + `/pairing_${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -40,7 +40,7 @@ async function makeImage({ one, two }) {
 
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    pairing_img.composite(circleOne.resize(350, 350), 332, 336).composite(circleTwo.resize(355, 360), 53, 42);
+    pairing_img.composite(circleOne.resize(383, 380), 820, 147).composite(circleTwo.resize(386, 394), 90, 140);
 
     let raw = await pairing_img.getBufferAsync("image/png");
 
